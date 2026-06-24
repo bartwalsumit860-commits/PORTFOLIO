@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NavLinks = [
   {
     text: "About",
@@ -10,11 +8,11 @@ const NavLinks = [
     href: "#skills"
   },
   {
-    text: "Project",
+    text: "Projects",
     href: "#project"
   },
   {
-    text: "Certification",
+    text: "Certifications",
     href: "#certification"
   },
   {
@@ -34,11 +32,11 @@ const Header = () => {
    backdrop-blur-md
   bg-transparent
   border-b border-white/10 sticky top-0 w-full h-16">
-      <div className="w-6xl mx-auto flex items-center justify-between p-4 ">
+      <div className="max-w-5xl mx-auto flex items-center justify-between p-4 ">
         <div className="text-[#818cf8] font-bold text-lg cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>SB</div>
 
-        <ul className="flex gap-8 list-none">
+        <ul className="hidden md:flex gap-8 list-none">
           {
             NavLinks.map((link, index) => {
               return (

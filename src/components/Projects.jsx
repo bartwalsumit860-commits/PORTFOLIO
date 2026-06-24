@@ -1,4 +1,3 @@
-import React from 'react'
 import { IoMdLink } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
@@ -38,65 +37,63 @@ const projects = [
 const Projects = () => {
     return (
         <div id='project' className='px-6 py-20 flex flex-col justify-center items-center border border-b-white/20'>
-            <div className="w-5xl mx-auto">
-                <div className="flex justify-between mb-15">
+            <div className="w-full max-w-5xl mx-auto">
+                <div className="flex flex-col md:flex-row justify-between mb-12 gap-6">
                     <div className="flex-1">
                         <h2 className='text-xl text-[#818CF8] text-left'>Projects</h2>
-                        <h2 className='text-[#ebebed] text-5xl font-bold'>Selected<br />Work</h2>
+                        <h2 className='text-[#ebebed] text-3xl md:text-5xl font-bold'>Selected<br />Work</h2>
                     </div>
 
-                    <div className="flex-1 mt-8">
-                        <p className='text-md text-[#535969] text-right hover:text-[#818CF8] transition-all duration-300'>
+                    <div className="flex-1 md:mt-8">
+                        <p className='text-md text-[#535969] md:text-right hover:text-[#818CF8] transition-all duration-300'>
                             Three full-stack and ML projects — all deployed,<br /> all with real data and working features enabled.
                         </p>
                     </div>
                 </div>
-
 
                 <div className="grid grid-cols-1 gap-4 w-full">
                     {
                         projects.map((project, index) => {
                             return (
                                 <div key={index} className="group border border-white/20 overflow-hidden hover:shadow-gray-800 hover:shadow-md">
-                                    <div className="overflow-hidden aspect[16/7] mb-7">
+                                    <div className="overflow-hidden aspect-[16/7] mb-7">
                                         <img src={project.image} alt="" className="w-full h-full object-cover opacity-60 hover:opacity-80 hover:scale-[1.02] transition-all duration-400" />
                                     </div>
 
-                                    <div className="flex justify-between px-6 py-7">
+                                    <div className="flex flex-col lg:flex-row justify-between px-6 py-7 gap-6">
                                         <div className="flex-1 flex flex-col gap-2">
                                             <p className='text-[#818CF8] text-md font-semibold'>{project.number}</p>
                                             <h1 className="text-[#ebebed] text-2xl font-bold">{project.title}</h1>
-                                            <p className='text-sm text-[#535969] w-[60%] mb-4'>{project.description}</p>
-                                            <div className="flex-1 flex gap-3">
+                                            <p className='text-sm text-[#535969] w-full lg:w-[60%] mb-4'>{project.description}</p>
+                                            <div className="flex flex-wrap gap-3">
                                                 {
                                                     project.stack.map((skill) => (
-                                                        <div key={skill} className="inline border border-white/20 px-2 py-1 mb-2  transition-all duration-300 hover:border-[#818CF8] hover:shadow-2xl active:animate-bounce">
+                                                        <div key={skill} className="inline border border-white/20 px-2 py-1 transition-all duration-300 hover:border-[#818CF8] hover:shadow-2xl active:animate-bounce">
                                                             <span className='text-[#ebebed] text-md'>{skill}</span>
                                                         </div>
                                                     ))
                                                 }
                                             </div>
                                         </div>
-                                        <div className="flex flex-col gap-4">
-                                            <a href={project.demo} className=""
+                                        <div className="flex flex-row lg:flex-col gap-4">
+                                            <a href={project.demo}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                             >
-                                                <button className='bg-[#818cf8] px-2 py-2 hover:bg-[#817cf8] text-sm flex gap-1 items-center'>
+                                                <button className='bg-[#818cf8] px-4 py-2 rounded-md hover:bg-[#817cf8] text-sm flex gap-1 items-center'>
                                                     <IoMdLink />
                                                     Live Demo</button>
                                             </a>
 
-                                            <a href={project.repo} className=""
+                                            <a href={project.repo}
                                                 target='_blank'
                                                 rel='noopener noreferrer'
                                             >
-                                                <button className='border border-gray-700 px-2 py-2 text-sm text-gray-100 hover:text-gray-300 hover:text-shadow-amber-100 flex gap-1 items-center w-full'>
+                                                <button className='border border-gray-700 px-4 py-2 rounded-md text-sm text-gray-100 hover:text-gray-300 flex gap-1 items-center'>
                                                     <FaGithub/>
                                                     Source
                                                 </button>
                                             </a>
-
                                         </div>
                                     </div>
                                 </div>

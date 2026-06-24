@@ -1,5 +1,3 @@
-import React from 'react'
-
 const NavLinks = [
   {
     text: "About",
@@ -24,12 +22,17 @@ const NavLinks = [
 ];
 
 const Footer = () => {
+
+  const go = (href) => {
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+  }
+
   return (
-    <div className='px-15 py-4'>
-        <div className="max-w-5xl mx-auto flex justify-between">
-            <h1 className='text-xl text-[#818CF8] text-left font-semibold'>SUMIT BARTWAL</h1>
+    <div className='px-6 py-4'>
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <h1 className='text-xl text-[#818CF8] font-semibold'>SUMIT BARTWAL</h1>
             <p className='text-sm text-center text-[#535969]'>&copy;2026 — Full Stack Developer, Dehradun</p>
-            <ul className="flex gap-4 list-none">
+            <ul className="hidden md:flex gap-4 list-none">
           {
             NavLinks.map((link, index) => {
               return (

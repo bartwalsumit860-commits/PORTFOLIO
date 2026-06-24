@@ -1,14 +1,7 @@
-import React from 'react'
-import { TbCloudComputing } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { IoStatsChart } from "react-icons/io5";
-import { TbCloudNetwork } from "react-icons/tb";
-import { SiLeetcode } from "react-icons/si";
-
 const Certificate_Card = ({ c }) => {
     const Icon  = c.icon;
     return (
-        <div class=" bg-[#1E1E1E]/30 border border-white/20 shadow-sm shadow-gray-800 hover:bg-[#1E1E1E] rounded-xl   p-6 hover:scale-[1.01] transition-all duration-300 hover:border-[#818CF8] ">
+        <div className="bg-[#1E1E1E]/30 border border-white/20 shadow-sm shadow-gray-800 hover:bg-[#1E1E1E] rounded-xl p-6 hover:scale-[1.01] transition-all duration-300 hover:border-[#818CF8]">
             <div className="border border-white/20 w-fit py-2 px-3 rounded-full text-white mb-2">
             <Icon size={30}/>
             </div>
