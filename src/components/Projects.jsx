@@ -59,7 +59,7 @@ const Projects = () => {
                         projects.map((project, index) => {
                             return (
                                 <div key={index} className="group border border-white/20 overflow-hidden hover:shadow-gray-800 hover:shadow-md">
-                                    <div className="overflow-hidden aspect-[16/7] mb-7">
+                                    <div className="overflow-hidden aspect-16/7 mb-7">
                                         <img src={project.image} alt="" className="w-full h-full object-cover opacity-60 hover:opacity-80 hover:scale-[1.02] transition-all duration-400" />
                                     </div>
 

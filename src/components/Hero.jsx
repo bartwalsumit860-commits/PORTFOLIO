@@ -30,6 +30,7 @@ const Socials = [
 ]
 
 const Hero = () => {
+  
     return (
         <div id='hero' className='min-h-screen flex flex-col justify-center px-6 border border-b-white/20'>
             <div className="w-full max-w-5xl mx-auto">
@@ -65,7 +66,12 @@ const Hero = () => {
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-3 mb-8">
-                        <button className='bg-[#818cf8] px-4 py-2 rounded-md hover:bg-[#817cf8]'>View Projects</button>
+                         <a href='#project'
+                            rel='noopener noreferrer'
+                        >
+                             <button className='bg-[#818cf8] px-4 py-2 rounded-md hover:bg-[#817cf8]'>View Projects</button>
+                        </a>
+                       
 
                         <a href='https://drive.google.com/file/d/11hsgY2a4R1FRvyCDEfG1wwis3J_4UojR/view?usp=drivesdk'
                             rel='noopener noreferrer'
