@@ -1,5 +1,61 @@
 @import "tailwindcss";
+
+:root {
+  --bg-primary: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-input: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-nav: #6b7280;
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+  --border: rgba(0, 0, 0, 0.1);
+  --border-light: rgba(0, 0, 0, 0.06);
+  --shadow: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.08);
+  --pill-bg: rgba(0, 0, 0, 0.05);
+  --success: #10b981;
+  --icon-color: #374151;
+}
+
+.dark {
+  --bg-primary: #0a0a0b;
+  --bg-card: #1e1e1e;
+  --bg-input: rgba(255, 255, 255, 0.08);
+  --text-primary: #ebebed;
+  --text-secondary: #a0a5b0;
+  --text-muted: #6b7280;
+  --text-nav: #9ca3af;
+  --accent: #818cf8;
+  --accent-hover: #a5b4fc;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.06);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-md: rgba(0, 0, 0, 0.5);
+  --pill-bg: rgba(255, 255, 255, 0.05);
+  --success: #34d399;
+  --icon-color: #d1d5db;
+}
+
+.bg-page { background-color: var(--bg-primary); }
+.bg-card { background-color: var(--bg-card); }
+.bg-input { background-color: var(--bg-input); }
+.text-heading { color: var(--text-primary); }
+.text-body { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.text-nav { color: var(--text-nav); }
+.text-accent { color: var(--accent); }
+.text-icon { color: var(--icon-color); }
+.border-theme { border-color: var(--border); }
+.border-b-theme { border-bottom-color: var(--border); }
+
 html {
   scroll-behavior: smooth;
 }
 
+* {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
