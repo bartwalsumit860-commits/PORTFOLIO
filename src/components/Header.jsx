@@ -79,7 +79,7 @@ const Header = () => {
         </ul>
 
 
-        <div ref={navRef}>
+        <div ref={navRef} className="md:hidden">
           <div
             className="md:hidden text-[#ebebed] absolute top-5 right-5 cursor-pointer transition-transform duration-300"
             onClick={() => setopen(!open)}
@@ -87,8 +87,8 @@ const Header = () => {
             {open ? <IoClose size={20} /> : <GiHamburgerMenu size={20} />}
           </div>
           <nav
-            className={`md:hidden absolute bg-gray-900 p-4 gap-2 rounded-b-md top-10 right-4 flex flex-col
-            transition-all duration-300 ease-out origin-top-right
+            className={`md:hidden absolute bg-black p-5 gap-3 rounded-b-md top-15 right-0  flex flex-col
+            transition-all duration-300 ease-out origin-top-right w-full 
             ${open
                 ? "opacity-100 scale-100"
                 : "opacity-0 scale-95 pointer-events-none"
@@ -101,10 +101,15 @@ const Header = () => {
                   go(link.href);
                   setopen(false);
                 }}
-                className="text-[#4e535d] text-sm hover:text-white font-semibold transition-colors duration-300"
+                className="text-[#4e535d] text-left text-md hover:text-white font-semibold 
+                transition-colors duration-300 "
+
               >
                 {link.text}
+                 <hr className="text-white/20 mt-2"/>
               </button>
+
+             
             ))}
           </nav>
         </div>
