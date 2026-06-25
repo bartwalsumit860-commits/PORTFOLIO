@@ -1,5 +1,8 @@
 import { IoMdLink } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import bookImg from "../assets/projects/book-recommendation-system-3-engn.onrender.com_ (1).png";
+import jobImg from "../assets/projects/Screenshot 2026-06-23 183544.png";
+import chatImg from "../assets/projects/chit-chat-1-fhvv.onrender.com_.png";
 
 const projects = [
     {
@@ -10,7 +13,7 @@ const projects = [
         stack: ["React", "FastAPI", "Python", "Collaborative Filtering", "Pickle"],
         demo: "https://book-recommendation-system-3-engn.onrender.com/",
         repo: "https://github.com/bartwalsumit860-commits/Book_Recommendation_Systems",
-        image: "src/assets/projects/book-recommendation-system-3-engn.onrender.com_ (1).png?w=800&h=450&fit=crop&auto=format",
+        image: bookImg,
     },
     {
         number: "02",
@@ -20,7 +23,7 @@ const projects = [
         stack: ["React", "Redux Toolkit", "Node.js", "Express", "MongoDB", "JWT"],
         demo: "https://job-khoj-3.onrender.com/",
         repo: "https://github.com/bartwalsumit860-commits/Job_Khoj",
-        image: "src/assets/projects/Screenshot 2026-06-23 183544.png?w=800&h=450&fit=crop&auto=format",
+        image: jobImg,
     },
     {
         number: "03",
@@ -30,7 +33,7 @@ const projects = [
         stack: ["React", "Node.js", "Express", "MongoDB", "Socket.IO", "JWT"],
         demo: "https://chit-chat-1-fhvv.onrender.com/",
         repo: "https://github.com/bartwalsumit860-commits/Chit_Chat",
-        image: "src/assets/projects/chit-chat-1-fhvv.onrender.com_.png?w=800&h=450&fit=crop&auto=format",
+        image: chatImg,
     },
 ];
 
